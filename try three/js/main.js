@@ -12,7 +12,7 @@ function setup() {
 function draw() {
     game.drawGame();
 
-    let t = frameCount / 60; // update time
+    let t = frameCount / 1000; // update time
   
     // create a random number of snowflakes each frame
     for (let i = 0; i < random(5); i++) {
@@ -31,10 +31,6 @@ function keyPressed() {
     if (keyCode === 32 && game.player.canJump) {
         game.player.jump();
     }
-    // if (keyCode === 39) {
-        
-    //     game.player.moveRight();
-    // }
 }
 // function keyPressed() {
 
