@@ -4,14 +4,18 @@ class Obstacle {
     this.width = 50;
     this.x = (Math.random() * width) / 1.5;
     this.y = height - this.height;
-    this.image = img;
     this.platform;
   }
-  upgrapeCollision() {
-    let upgradeX = this.x + this.width / 2;
-    let upgradeY = this.y + this.height / 2;
+  upgradeCollision(playerInfo) {
     let playerX = playerInfo.x + playerInfo.width / 2
     let playerY = playerInfo.y + playerInfo.height / 2
+    console.log(dist(this.x, this.y * 1.5, playerX, playerY));
+    if (dist(this.x, this.y * 1.5, playerX, playerY) > 40) {
+      console.log("upgrade collision");
+      return false;
+    } else {
+      return true;
+    }
   }
   platformCollision(playerInfo) {
     let obstacleX = this.x + this.width / 2;
@@ -28,6 +32,7 @@ class Obstacle {
     this.y -= 2
     rect(this.x,this.y,100,10)
   }
+
   
   drawTriangles() {
     let trianglesDown = [];

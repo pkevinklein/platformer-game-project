@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-//   background('brown');
+  //  background('black');
 //   let t = frameCount / 60; // update time
 
 //   // create a random number of snowflakes each frame
@@ -26,7 +26,8 @@ function draw() {
 
 // snowflake class
 function snowflake() {
-  // initialize coordinates
+    // initialize coordinates
+ 
   this.posX = 0;
   this.posY = random(-50, 0);
   this.initialangle = random(0, 2 * PI);
