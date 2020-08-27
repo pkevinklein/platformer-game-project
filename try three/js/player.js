@@ -12,12 +12,13 @@ class Player {
   this.playing = false;
   this.score = 0;
   this.angle = 0.2
-
-  this.side = 100;
+  this.history = []
+  this.vector = createVector(this.x, this.y);
   }
 
   setGame(game) {
     this.game = game;
+
   }
   // show() {
 
@@ -35,35 +36,21 @@ class Player {
   // }
 
   drawPlayer() {
-    // this.angle+=0.02
-    // //move
-    // push()
-    // translate(width / 2, height / 2);
-    // rotate(this.angle);
-    // rect(-26, -26, 52, 52);
-
-    
-    // pop()
-    // push();
-    // translate(this.x + 20,this.y + 20)
-
-    // translate(
-    //   this.x * this.width,
-    //   this.y * this.width
-    // );
-    // rotate((PI / 20) * frameCount);
-    // rectMode(CENTER);
-
-    // rect(this.x, this.y, this.width, this.width)
-    // pop();
-
-    // push();
-    // this.angle += 10;
-    // // translate(this.x,this.y)
-    // rotate(this.angle)
-    
-     square(this.x, this.y, this.width)
-    // pop();
+    if(this.score > 9) {
+      fill(random(100, 255),random(100, 255),random(100, 255))
+    }    
+    square(this.x, this.y, this.width)
+    // this.history.push(this.vector)
+    // if (this.history.length > 25) {
+    //     this.history.splice(0,1);
+    // }
+    // console.log(this.x);
+  //   push()
+  //   for (let i = 0; i < this.history.length; i++) {
+  //     fill(random(255))
+  //     square(this.x, this.y, this.width)
+  // }
+  //   pop();
     
     if (keyIsDown(39)) {
       this.x += 5

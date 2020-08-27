@@ -10,6 +10,7 @@ function setup() {
     noStroke();
 }
 function draw() {
+    background(200)
     game.drawGame();
     let t = frameCount / 1000; // update time
     // create a random number of snowflakes each frame

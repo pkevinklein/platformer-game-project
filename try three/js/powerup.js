@@ -8,6 +8,8 @@ class PowerUp {
         this.y = height - this.height;
         this.platform;
         this.game = new Game();
+        this.particle = new Particle (this.x,this.y);
+        this.player = new Player()
     }
 
     drawUpgrade() {
@@ -22,8 +24,7 @@ class PowerUp {
           return false;
         } else {
             playerInfo.score++;
-            // game.soundFile.play();
-            console.log(playerInfo.score);
+            // this.particle.particles.push(new Particle(this.player.x,this.player.y));
           return true;
         }
       }

@@ -6,17 +6,18 @@ class Obstacle {
     this.y = height - this.height;
     this.platform;
   }
-  upgradeCollision(playerInfo) {
-    let playerX = playerInfo.x + playerInfo.width / 2
-    let playerY = playerInfo.y + playerInfo.height / 2
-    console.log(dist(this.x, this.y * 1.5, playerX, playerY));
-    if (dist(this.x, this.y * 1.5, playerX, playerY) > 40) {
-      console.log("upgrade collision");
-      return false;
-    } else {
-      return true;
-    }
-  }
+  // upgradeCollision(playerInfo) {
+  //   let playerX = playerInfo.x + playerInfo.width / 2
+  //   let playerY = playerInfo.y + playerInfo.height / 2
+  //   console.log(dist(this.x, this.y * 1.5, playerX, playerY));
+  //   if (dist(this.x, this.y * 1.5, playerX, playerY) > 40) {
+  //     console.log("upgrade collision");
+  //     return false;
+  //   } else {
+
+  //     return true;
+  //   }
+  // }
   platformCollision(playerInfo) {
     let obstacleX = this.x + this.width / 2;
     let obstacleY = this.y + this.height / 2;
